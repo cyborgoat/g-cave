@@ -1,8 +1,8 @@
 import Image from "next/image";
-import GGrid from "@/components/gadgets/GGrid";
 import Link from "next/link";
-import GitHubIcon from "@/components/icon/GitHubIcon";
-import LinkedInIcon from "@/components/icon/LinkedInIcon";
+import GGrid from "../components/gadgets/GGrid";
+import GitHubIcon from "../components/icon/GitHubIcon";
+import LinkedInIcon from "../components/icon/LinkedInIcon";
 
 export default function Home() {
     return (

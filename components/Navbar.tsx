@@ -6,15 +6,27 @@ export default function Navbar() {
             </div>
             <div className="flex-none">
                 <ul className="menu menu-horizontal px-1">
-                    <li><a>Link</a></li>
+                    <li><a>Sports</a></li>
                     <li>
                         <details>
                             <summary>
-                                Blog
+                                Music
                             </summary>
                             <ul className="p-2 bg-slate-400">
-                                <li><a>Link 1</a></li>
-                                <li><a>Link 2</a></li>
+                                <li><a>My Favorites</a></li>
+                                <li><a>My Productions</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>
+                                Tech
+                            </summary>
+                            <ul className="p-2 bg-slate-400">
+                                <li><a>AI</a></li>
+                                <li><a>Backend Dev</a></li>
+                                <li><a>Frontend Dev</a></li>
                             </ul>
                         </details>
                     </li>

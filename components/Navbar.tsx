@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Navbar() {
     return (
         <div className="navbar bg-slate-400/30 rounded-xl w-11/12 mx-auto text-slate-50 mt-2">
@@ -24,7 +26,7 @@ export default function Navbar() {
                                 Tech
                             </summary>
                             <ul className="p-2 bg-slate-400">
-                                <li><a>AI</a></li>
+                                <li><Link href={"/tech"}>AI</Link></li>
                                 <li><a>Backend Dev</a></li>
                                 <li><a>Frontend Dev</a></li>
                             </ul>

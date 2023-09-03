@@ -2,26 +2,73 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+@layer base {
+  .gradient-block {
+    @apply rounded-xl bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 p-0.5 shadow-xl dark:shadow-gray-700/25;
   }
-}
 
-body {
-  /*color: rgb(var(--foreground-rgb));*/
-  /*background: linear-gradient(*/
-  /*    to bottom,*/
-  /*    transparent,*/
-  /*    rgb(var(--background-end-rgb))*/
-  /*  )*/
-  /*  rgb(var(--background-start-rgb));*/
+  .gradient-text {
+    @apply animate-text bg-gradient-to-r from-teal-500 via-purple-500 to-orange-500 bg-clip-text text-transparent;
+  }
+
+  /* Styles applied for markdown files */
+  article > .progress-bar {
+    @apply fixed left-0 right-0 top-0 h-1 bg-cyan-500/75;
+    transform-origin: 0%;
+  }
+
+  .react-mark-down {
+    @apply text-sm text-slate-800 dark:text-slate-200;
+  }
+
+  .react-mark-down h2 {
+    @apply text-xl text-zinc-800 dark:text-zinc-200 font-medium border-b-2 m-0 mb-2 p-0 border-indigo-500/70;
+  }
+
+  .react-mark-down h3,
+  h4 {
+    @apply text-zinc-800 dark:text-zinc-200;
+  }
+
+  .react-mark-down strong {
+    @apply font-bold text-zinc-800 dark:text-zinc-200 border-b-2 border-rose-400/50;
+  }
+
+  .react-mark-down ul li::marker {
+    @apply dark:text-slate-500 !important;
+  }
+
+  .react-mark-down pre {
+    @apply px-1 py-1 mx-0 my-3 bg-white dark:bg-slate-600 text-zinc-600 dark:text-zinc-300;
+  }
+
+
+  .react-mark-down pre > div {
+    @apply py-1 px-1 mx-0 my-0 overflow-auto !important;
+  }
+
+  .react-mark-down p > code {
+    @apply text-slate-800 dark:text-slate-200 rounded-md border-2 border-cyan-500 dark:border-cyan-800 p-0.5;
+  }
+
+
+  .react-mark-down pre > code {
+    @apply text-cyan-100 overflow-hidden;
+  }
+
+  .react-mark-down blockquote {
+    @apply text-indigo-500 dark:text-indigo-300;
+  }
+
+  .react-mark-down img {
+    @apply max-w-xs md:max-w-sm lg:max-w-md mx-auto rounded-md drop-shadow-md;
+  }
+
+  .spacer {
+    aspect-ratio: 1440/74;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
 }

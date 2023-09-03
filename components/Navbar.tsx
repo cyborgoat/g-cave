@@ -26,7 +26,7 @@ export default function Navbar() {
                                 Tech
                             </summary>
                             <ul className="p-2 bg-slate-400">
-                                <li><Link href={"/tech"}>AI</Link></li>
+                                <li><Link href={"/blog"}>AI</Link></li>
                                 <li><a>Backend Dev</a></li>
                                 <li><a>Frontend Dev</a></li>
                             </ul>

@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Navbar() {
     return (
-        <div className="navbar bg-slate-400/30 rounded-xl w-11/12 mx-auto text-slate-50 mt-2">
+        <div className="navbar bg-amber-800/70 rounded-xl w-11/12 mx-auto text-slate-50 mt-2">
             <div className="flex-1">
                 <a className="btn btn-ghost normal-case text-xl">Junxiao Guo</a>
             </div>

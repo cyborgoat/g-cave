@@ -27,7 +27,7 @@ export default function Page() {
     if (error) return "An error has occurred.";
     if (isLoading) return "Loading...";
     return (
-        <div className='text-slate-50 px-24 pt-8'>
+        <div className='px-24 pt-8'>
             <article className="max-w-full mb-24 prose-sm prose md-post lg:prose-lg">
                 <motion.div
                     className="progress-bar"

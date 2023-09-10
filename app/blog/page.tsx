@@ -16,7 +16,7 @@ export default function BlogHome() {
                 {blogList.map((blogInfo, ix) => {
                     return (
                         <li key={ix}>
-                            <a href={`/blog/detail?category=${blogInfo.category}&title=${blogInfo.fname.replace('.json', '')}`}>{blogInfo.title}</a>
+                            <a href={`/g-cave/blog/detail?category=${blogInfo.category}&title=${blogInfo.fname.replace('.json', '')}`}>{blogInfo.title}</a>
                         </li>
                     )
 

@@ -1,6 +1,7 @@
 'use client';
 import useSWR from "swr";
 import {BlogInfo} from "../../types/blog";
+import LoadingCircles from "../../components/LoadingCircles";
 
 const fetcher = (url: string) => fetch(url).then((res) => res.json());
 const BLOG_URL_PREFIX = 'https://raw.githubusercontent.com/cyborgoat/tech-reservoir/main'
@@ -8,7 +9,9 @@ export default function BlogHome() {
     const {data, error, isLoading} = useSWR(`${BLOG_URL_PREFIX}/assets/catalog.json`, fetcher);
 
     if (error) return "An error has occurred.";
-    if (isLoading) return "Loading...";
+
+    if (isLoading) return <LoadingCircles/>;
+
     let blogList = data as BlogInfo[];
     return (
         <div>
@@ -16,7 +19,8 @@ export default function BlogHome() {
                 {blogList.map((blogInfo, ix) => {
                     return (
                         <li key={ix}>
-                            <a href={`/g-cave/blog/detail?category=${blogInfo.category}&title=${blogInfo.fname.replace('.json', '')}`}>{blogInfo.title}</a>
+                            <a href={`/g-cave/blog/detail?category=${blogInfo.category}&title=${blogInfo.fname.replace('.json', '')}`}>
+                                {blogInfo.title}</a>
                         </li>
                     )
 

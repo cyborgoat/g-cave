@@ -4,14 +4,13 @@ export interface Tag {
 }
 
 export interface BlogInfo {
-    id: number,
+    category: string,
+    fname: string,
     title: string,
     author: string,
     date: string,
     summary: string,
     tags: Tag[],
-    visits: number,
-    likes: number,
 }
 
 export interface BlogDetail extends BlogInfo {

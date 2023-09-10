@@ -24,7 +24,7 @@ export default function Home() {
                     {blogList.map((blogInfo, ix) => {
                         return (
                             <li key={ix} className="mt-2">
-                                <a href={`${DEV_MODE ? './' + location.pathname : ""}/blog/detail?category=${blogInfo.category}&title=${blogInfo.fname.replace('.json', '')}`}
+                                <a href={`${DEV_MODE ? './g-cave/' + location.pathname : ""}/blog/detail?category=${blogInfo.category}&title=${blogInfo.fname.replace('.json', '')}`}
                                    className="hover:text-sky-400 duration-300"
                                 >
                                     {blogInfo.title}

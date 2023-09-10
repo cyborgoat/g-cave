@@ -21,9 +21,9 @@ export default function RootLayout({
         {/*<body className={inter.className}>*/}
         <body>
         <Providers>
-            <div className={"min-h-screen px-8"}>
-                <Navbar/>
-                <div>
+            <Navbar/>
+            <div className="flex justify-center min-h-screen w-screen px-8">
+                <div className="flex w-4/5 mt-8">
                     {children}
                 </div>
             </div>

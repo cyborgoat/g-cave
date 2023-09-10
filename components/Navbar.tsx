@@ -31,7 +31,7 @@ export default function App() {
         </Dropdown>
     )
     return (
-        <Navbar className="h-10 mt-4 bg-zinc-50 border-b-2 border-zinc-800/60 w-3/5 max-w-3xl mx-auto">
+        <Navbar className="h-10 mt-4 bg-zinc-50 border-b-2 border-zinc-800/60 w-4/5 mx-auto">
             <NavbarBrand>
                 <AcmeLogo/>
             </NavbarBrand>

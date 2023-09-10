@@ -5,6 +5,7 @@ import LoadingCircles from "@components/LoadingCircles";
 
 import {ScrollShadow} from "@nextui-org/react";
 import {BlogInfo} from "../types/blog";
+import {DEV_MODE} from "./settings";
 
 const fetcher = (url: string) => fetch(url).then((res) => res.json());
 const BLOG_URL_PREFIX = 'https://raw.githubusercontent.com/cyborgoat/tech-reservoir/main'
@@ -23,7 +24,7 @@ export default function Home() {
                     {blogList.map((blogInfo, ix) => {
                         return (
                             <li key={ix} className="mt-2">
-                                <a href={`./${location.pathname}/blog/detail?category=${blogInfo.category}&title=${blogInfo.fname.replace('.json', '')}`}
+                                <a href={`${DEV_MODE ? './' + location.pathname : ""}/blog/detail?category=${blogInfo.category}&title=${blogInfo.fname.replace('.json', '')}`}
                                    className="hover:text-sky-400 duration-300"
                                 >
                                     {blogInfo.title}

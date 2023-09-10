@@ -23,7 +23,9 @@ export default function App() {
                 variant="light"
             >
                 <DropdownItem className={"capitalize"} key="resume">resume</DropdownItem>
-                <DropdownItem className={"capitalize"} key="blog">tech blog</DropdownItem>
+                <DropdownItem className={"capitalize"} key="blog">
+                    <a href={"/blog"}>tech blog</a>
+                </DropdownItem>
                 <DropdownItem className={"capitalize"} key="music">music production</DropdownItem>
             </DropdownMenu>
         </Dropdown>
@@ -35,7 +37,7 @@ export default function App() {
             </NavbarBrand>
             <NavbarContent className="hidden sm:flex gap-4" justify="center">
                 <NavbarItem className="hidden lg:flex">
-                    <p className="font-semibold text-inherit">Junxiao Guo</p>
+                    <a className="font-semibold text-inherit" href={'/'}>Junxiao Guo</a>
                 </NavbarItem>
             </NavbarContent>
             <NavbarContent justify="end">

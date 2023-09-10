@@ -19,7 +19,23 @@
     "jsx": "preserve",
     "incremental": true,
     "baseUrl": "./",
-    "paths": {},
+    "paths": {
+      "@components/*": [
+        "components/*"
+      ],
+      "@contentful/*": [
+        "contentful/*"
+      ],
+      "@layouts/*": [
+        "layouts/*"
+      ],
+      "@styles/*": [
+        "styles/*"
+      ],
+      "@utils/*": [
+        "utils/*"
+      ],
+    },
     "plugins": [
       {
         "name": "next"
@@ -32,8 +48,10 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "util/markdownFetcher.js",
-    "lib/configLoader.js"
-, "components/icon/MoonIcon.js", "components/icon/SunIcon.js"  ],
+    "lib/configLoader.js",
+    "components/icon/MoonIcon.js",
+    "components/icon/SunIcon.js"
+  ],
   "exclude": [
     "node_modules"
   ]

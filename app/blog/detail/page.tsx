@@ -2,18 +2,9 @@
 import React from "react";
 import useSWR from "swr";
 import {useSearchParams} from "next/navigation";
-import ReactMarkdown from "react-markdown";
-import {oneDark} from 'react-syntax-highlighter/dist/cjs/styles/prism';
-import {Prism as SyntaxHighlighter} from 'react-syntax-highlighter';
-import rehypeKatex from "rehype-katex";
-import remarkMath from "remark-math";
-import remarkGfm from "remark-gfm";
-import rehypeRaw from "rehype-raw";
-import {motion, useScroll} from "framer-motion";
 import 'katex/dist/katex.min.css'
 import {BlogDetail} from "../../../types/blog"; // `rehype-katex` does not import the CSS for you
 import matter from "gray-matter";
-import type {Metadata} from 'next'
 import MarkdownRender from "../../../components/MarkdownRender";
 
 const fetcher = (url: string) => fetch(url).then((res) => res.json());

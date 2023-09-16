@@ -18,8 +18,10 @@ export default function Home() {
 
     let blogList = data as BlogInfo[];
     return (
-        <div className="grid grid-cols-2 w-full">
-            <ScrollShadow className="w-full h-[400px]">
+        <div className="grid gap-4 grid-cols-2 w-full">
+            <div className="bg-pink-500">Blog Posts</div>
+            <div className="bg-green-500">Music Production</div>
+            <ScrollShadow className="w-full h-1/2">
                 <ul className="list-disc list-inside">
                     {blogList.map((blogInfo, ix) => {
                         return (
@@ -36,6 +38,7 @@ export default function Home() {
                 </ul>
             </ScrollShadow>
             <div className="w-1/2 col-span-1">
+                <h1>Recent Blogs</h1>
                 More contents coming soon...
             </div>
         </div>

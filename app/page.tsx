@@ -18,10 +18,14 @@ export default function Home() {
 
     let blogList = data as BlogInfo[];
     return (
-        <div className="grid gap-4 grid-cols-2 w-full">
-            <div className="bg-pink-500">Blog Posts</div>
-            <div className="bg-green-500">Music Production</div>
-            <ScrollShadow className="w-full h-1/2">
+        <div className="grid gap-x-16 gap-y-4 grid-cols-2 w-full">
+            <div className="text-5xl bg-slate-800/30">
+                Blog <br/> Posts
+            </div>
+            <div className="text-5xl bg-indigo-800/30">
+                Music <br/> Productions
+            </div>
+            <ScrollShadow className="w-full h-4/5">
                 <ul className="list-disc list-inside">
                     {blogList.map((blogInfo, ix) => {
                         return (
@@ -38,8 +42,7 @@ export default function Home() {
                 </ul>
             </ScrollShadow>
             <div className="w-1/2 col-span-1">
-                <h1>Recent Blogs</h1>
-                More contents coming soon...
+                Section under construction...
             </div>
         </div>
     )

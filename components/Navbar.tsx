@@ -6,42 +6,22 @@ import {AcmeLogo} from "./AcmeLogo";
 
 
 export default function App() {
-    const DropdownContent = () => (
-        <Dropdown>
-            <DropdownTrigger>
-                <Button
-                    color="warning"
-                    variant="light"
-                    className="capitalize font-bold text-zinc-900"
-                >
-                    My ...
-                </Button>
-            </DropdownTrigger>
-            <DropdownMenu
-                aria-label="Dropdown Variants"
-                color="warning"
-                variant="light"
-            >
-                <DropdownItem className={"capitalize"} key="resume">resume</DropdownItem>
-                <DropdownItem className={"capitalize"} key="blog">
-                    <a href={"/blog"}>tech blog</a>
-                </DropdownItem>
-                <DropdownItem className={"capitalize"} key="music">music production</DropdownItem>
-            </DropdownMenu>
-        </Dropdown>
-    )
     return (
-        <Navbar className="h-10 mt-4 bg-zinc-50 border-b-2 border-zinc-800/60 w-4/5 mx-auto">
+        <Navbar shouldHideOnScroll className="h-10 mt-4 bg-transparent w-full mx-auto">
             <NavbarBrand>
-                <AcmeLogo/>
-            </NavbarBrand>
-            <NavbarContent className="hidden sm:flex gap-4" justify="center">
                 <NavbarItem className="hidden lg:flex">
-                    <a className="font-semibold text-inherit" href={'/'}>Junxiao Guo</a>
+                    <a className="font-normal" href={'/'}>
+                        <span>Junxiao </span>
+                        <span className="underline underline-offset-4
+                        transition duration-300 ease-in-out hover:decoration-amber-500
+                        ">Guo</span>
+                    </a>
                 </NavbarItem>
-            </NavbarContent>
+            </NavbarBrand>
             <NavbarContent justify="end">
-                <DropdownContent/>
+                <a>Blog</a>
+                <a>Music</a>
+                <a>Cycling</a>
             </NavbarContent>
         </Navbar>
     );

@@ -19,7 +19,7 @@ export default function Home() {
 
     let blogList = data as BlogInfo[];
     const rootPrefix = process.env.NEXT_PUBLIC_ROOT_PREFIX
-    const webPrefix = rootPrefix ? rootPrefix + location.pathname : ""
+    const webPrefix = rootPrefix ? location.pathname : ""
     return (
         <div className="grid gap-x-16 gap-y-4 grid-cols-2 w-full">
             <div className="text-5xl bg-slate-800/30">

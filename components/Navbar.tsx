@@ -8,7 +8,7 @@ import process from "process";
 
 export default function App() {
     const rootPrefix = process.env.NEXT_PUBLIC_ROOT_PREFIX
-    const webPrefix = rootPrefix ? rootPrefix : "/"
+    const webPrefix = rootPrefix ? "/g-cave/" : "/"
     return (
         <Navbar shouldHideOnScroll className="h-10 mt-4 bg-transparent w-full mx-auto">
             <NavbarBrand>

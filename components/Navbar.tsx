@@ -13,11 +13,16 @@ export default function App() {
         <Navbar shouldHideOnScroll className="h-10 mt-4 bg-transparent w-full mx-auto">
             <NavbarBrand>
                 <NavbarItem className="hidden lg:flex">
-                    <a className="font-normal" href={webPrefix}>
-                        <span>Junxiao </span>
-                        <span className="underline underline-offset-4
-                        transition duration-300 ease-in-out hover:decoration-amber-500
-                        ">Guo</span>
+                    <a className="group/name font-normal text-xl" href={webPrefix}>
+                        <span className="underline underline-offset-4 decoration-slate-800/30
+                        group-hover/name:decoration-amber-500
+                        transition duration-700
+                        ">Junxiao</span>
+                        <span> </span>
+                        <span className="px-1 rounded border-2 border-zinc-800/30
+                        group-hover/name:border-slate-800
+                        transition duration-700
+                        "> Guo</span>
                     </a>
                 </NavbarItem>
             </NavbarBrand>

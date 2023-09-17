@@ -24,6 +24,9 @@ concurrency:
   group: "pages"
   cancel-in-progress: false
 
+env:
+  NEXT_PUBLIC_ROOT_PREFIX: ./g-cave/
+
 jobs:
   # Build job
   build:

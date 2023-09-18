@@ -24,12 +24,12 @@ export default function Home() {
             <div className="flex min-h-[40vh] justify-start">
                 <ul className="text-3xl gap-y-4 py-8">
                     <li className="text-zinc-500/50">I am a...</li>
-                    <li>Developer</li>
-                    <li>Music Producer</li>
-                    <li>Cycling Enthusiast</li>
+                    <li className="transition duration-500 hover:gradient-text">Developer</li>
+                    <li className="transition duration-500 hover:gradient-text">Music Producer</li>
+                    <li className="transition duration-500 hover:gradient-text">Cycling Enthusiast</li>
                 </ul>
             </div>
-            <div className="grid gap-x-16 gap-y-4 grid-cols-2 w-full">
+            <div className="grid gap-x-16 gap-y-4 grid-cols-1 lg:grid-cols-2 w-full">
                 <div className="group h-3/5">
                     <div className="bg-slate-800/30 falling-head">
                         Blog <br/> Posts

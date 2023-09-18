@@ -22,7 +22,7 @@ export default function RootLayout({
         <body>
         <Providers>
             <Navbar/>
-            <div className="flex mt-8 justify-center min-h-screen w-screen px-8 overflow-x-clip">
+            <div className="flex mt-8 justify-center min-h-screen w-screen px-8 lg:px-32 overflow-x-clip">
                 {children}
             </div>
             <Footer/>

@@ -27,9 +27,9 @@ export default function App() {
                 </NavbarItem>
             </NavbarBrand>
             <NavbarContent justify="end">
-                <a>Blog</a>
-                <a>Music</a>
-                <a>Cycling</a>
+                <a href={webPrefix + 'blog'}>Blog</a>
+                <a href={webPrefix + 'music'}>Music</a>
+                <a href={webPrefix + 'cycling'}>Cycling</a>
             </NavbarContent>
         </Navbar>
     );

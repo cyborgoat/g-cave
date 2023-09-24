@@ -19,9 +19,9 @@
     }
 
     .under-head {
-        @apply p-2 rounded-lg text-stone-400
-        hover:bg-zinc-200/30
-        group-hover:text-zinc-500
+        @apply p-2 rounded-lg text-stone-500 bg-slate-600/20 transition duration-400 ease-in-out
+        hover:bg-slate-600/30
+        group-hover:text-stone-400
     }
 
     /* Styles applied for markdown files */

@@ -4,7 +4,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import {Providers} from "./providers";
 
-// const inter = Inter({subsets: ['latin']})
+const inter = Inter({subsets: ['latin']})
 
 export const metadata = {
     title: 'G-Cave',
@@ -17,9 +17,8 @@ export default function RootLayout({
     children: React.ReactNode
 }) {
     return (
-        <html lang="en" className={"light bg-zinc-50"}>
-        {/*<body className={inter.className}>*/}
-        <body>
+        <html lang="en" className="dark">
+        <body className="dark:bg-slate-800">
         <Providers>
             <Navbar/>
             {/*<div className="flex mt-8 justify-center min-h-screen w-screen px-8 lg:px-32 overflow-x-clip">*/}

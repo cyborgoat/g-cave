@@ -16,9 +16,24 @@ const BLOG_URL_PREFIX = 'https://raw.githubusercontent.com/cyborgoat/tech-reserv
 export default function Home() {
     const {data, error, isLoading} = useSWR(`${BLOG_URL_PREFIX}/assets/catalog.json`, fetcher);
 
-    if (error) return "An error has occurred.";
+    if (error) return (
+        <div className="flex w-screen h-screen">
+            <div className="mx-auto my-auto">
+                An error has occurred... <br/>
+                Please try again later! xD
+            </div>
+        </div>
 
-    if (isLoading) return <LoadingCircles/>;
+    );
+
+    if (isLoading) return (
+        <div className="flex w-screen h-screen">
+            <div className="mx-auto my-auto">
+                <LoadingCircles/>
+            </div>
+        </div>
+
+    );
 
     let blogList = data as BlogInfo[];
     const rootPrefix = process.env.NEXT_PUBLIC_ROOT_PREFIX

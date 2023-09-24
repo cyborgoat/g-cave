@@ -10,17 +10,20 @@ export default function App() {
     const rootPrefix = process.env.NEXT_PUBLIC_ROOT_PREFIX
     const webPrefix = rootPrefix ? "/g-cave/" : "/"
     return (
-        <Navbar shouldHideOnScroll={false} className="h-[5vh] bg-transparent w-full mx-auto">
+        <Navbar shouldHideOnScroll={false} className="h-[5vh] bg-transparent dark:bg-slate-800 w-full mx-auto">
             <NavbarBrand>
                 <NavbarItem className="hidden lg:flex">
                     <a className="group/name font-normal text-xl" href={webPrefix}>
                         <span className="underline underline-offset-4 decoration-slate-800/30
+                        dark:decoration-slate-200/30
                         group-hover/name:decoration-amber-500
                         transition duration-700
                         ">Junxiao</span>
                         <span> </span>
                         <span className="px-1 rounded border-2 border-zinc-800/30
                         group-hover/name:border-slate-800
+                        dark: border-zinc-100/30
+                        dark:group-hover/name:border-slate-50
                         transition duration-700
                         "> Guo</span>
                     </a>

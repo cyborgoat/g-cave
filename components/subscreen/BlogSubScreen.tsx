@@ -12,19 +12,26 @@ export default function BlogSubScreen(props: { blogList: BlogInfo[], webPrefix: 
                     Developer
                 </h1>
             </div>
-            <div className="col-span-2">
+            <div className="col-span-2 group">
                 <ScrollShadow className="w-full h-[50vh] under-head">
                     <ul className="list-disc list-inside">
                         {props.blogList.map((blogInfo, ix) => {
                             return (
                                 <li key={ix} className="mt-2">
                                     <a href={`${props.webPrefix}/blog/detail?category=${blogInfo.category}&title=${blogInfo.fname.replace('.json', '')}`}
-                                       className="hover:text-zinc-900 duration-300 group/item"
+                                       className="hover:text-slate-50 duration-300 group/item"
                                     >
                                         {blogInfo.title}
                                         <div
                                             className="ml-2 transition-opacity ease-in-out delay-150 opacity-0 inline-block group-hover/item:opacity-100">
-                                            <Chip size="sm">{blogInfo.category}</Chip>
+                                            <Chip size="sm"
+                                                  variant="shadow"
+                                                  classNames={{
+                                                      base: "bg-gradient-to-br from-indigo-500 to-pink-500 border-small border-white/50 shadow-pink-500/30",
+                                                      content: "drop-shadow shadow-black text-white",
+                                                  }}>
+                                                {blogInfo.category}
+                                            </Chip>
                                         </div>
                                     </a>
                                 </li>

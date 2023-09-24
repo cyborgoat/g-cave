@@ -30,7 +30,7 @@ export default function MarkdownRender(props: { blog: BlogDetail, content: strin
                 className="pt-2 mt-2 mb-2 text-xl font-semibold border-t-4 lg:text-2xl text-zinc-800 dark:text-zinc-200 border-zinc-600/30">{props.blog.title}</div>
             <ReactMarkdown
                 remarkPlugins={[remarkMath, remarkGfm]}
-                rehypePlugins={[rehypeKatex, rehypeRaw]}
+                rehypePlugins={[rehypeKatex as any, rehypeRaw as any]}
                 className={`react-mark-down`}
                 components={{
                     code({node, inline, className, children, ...props}: any) {

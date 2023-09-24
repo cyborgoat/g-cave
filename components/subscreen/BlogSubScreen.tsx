@@ -5,7 +5,10 @@ export default function BlogSubScreen(props: { blogList: BlogInfo[], webPrefix: 
     return (
         <div className="grid grid-cols-3 w-full justify-start items-center">
             <div className="col-span-1">
-                <h1 className="font-semibold text-5xl">
+                <h1 className="font-semibold text-5xl
+                bg-gradient-to-r bg-clip-text  text-transparent
+                from-indigo-500 via-purple-500 to-indigo-500 animate-text">
+                    Fullstack<br/>
                     Developer
                 </h1>
             </div>

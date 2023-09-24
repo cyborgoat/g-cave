@@ -8,6 +8,8 @@ import * as process from "process";
 import PersonalIntro from "@components/subscreen/PersonalIntro";
 import BlogSubScreen from "@components/subscreen/BlogSubScreen";
 import ChevronDown from "@components/icon/CheveronDown";
+import MusicSubScreen from "@components/subscreen/MusicSubScreen";
+import CyclingSubScreen from "@components/subscreen/CyclingSubScreen";
 
 const fetcher = (url: string) => fetch(url).then((res) => res.json());
 const BLOG_URL_PREFIX = 'https://raw.githubusercontent.com/cyborgoat/tech-reservoir/main'
@@ -23,7 +25,7 @@ export default function Home() {
     const webPrefix = rootPrefix ? location.pathname : ""
     return (
         // <div className="flex flex-col">
-        <main className="h-screen w-screen snap-y snap-mandatory overflow-y-scroll scroll-smooth">
+        <main className="h-screen snap-y snap-mandatory overflow-y-scroll scroll-smooth">
 
             <section id="personal-info" className="flex flex-col items-center snap-start mx-12 lg:mx-24">
                 <div className="flex items-center h-[85vh]"><PersonalIntro/></div>
@@ -36,19 +38,16 @@ export default function Home() {
                 <div className="mx-auto h-[10vh]"><a href="#music-producer"> <ChevronDown/> </a></div>
             </section>
 
-            <section id="music-producer" className="flex flex-col items-center snap-start mx-12 lg:mx-24">
-                <div className="flex items-center h-[85vh]">
-                    <h1>Music Producer(section under construction)</h1>
-                </div>
+            <section id="music-producer" className="flex flex-col snap-start mx-12 lg:mx-24">
+                <div className="flex items-center h-[85vh]"><MusicSubScreen/></div>
                 <div className="mx-auto h-[10vh]"><a href="#cycling-fan"> <ChevronDown/> </a></div>
             </section>
 
-            <section id="cycling-fan" className="flex flex-col items-center snap-start mx-12 lg:mx-24">
-                <div className="flex items-center h-[85vh]">
-                    <h1>Cycling Fan(section under construction)</h1>
-                </div>
+            <section id="cycling-fan" className="flex flex-col snap-start mx-12 lg:mx-24">
+                <div className="flex items-center h-[85vh]"><CyclingSubScreen/></div>
                 <div className="mx-auto h-[10vh]"><a href="#cycling-fan"> <ChevronDown/> </a></div>
             </section>
+
         </main>
     )
 }

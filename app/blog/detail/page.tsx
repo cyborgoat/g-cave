@@ -26,10 +26,7 @@ export default function Page() {
     const blogDetail = data as BlogDetail;
     const {content} = matter(blogDetail.content);
     return (
-        <div className='px-24 pt-8'>
-            <MarkdownRender blog={blogDetail} content={content}></MarkdownRender>
-        </div>
-
+        <MarkdownRender blog={blogDetail} content={content}></MarkdownRender>
     );
 
 }

@@ -18,13 +18,10 @@ export default function RootLayout({
 }) {
     return (
         <html lang="en" className="dark">
-        <body className="dark:bg-slate-800">
+        <body className="min-h-screen dark:bg-slate-800">
         <Providers>
             <Navbar/>
-            {/*<div className="flex mt-8 justify-center min-h-screen w-screen px-8 lg:px-32 overflow-x-clip">*/}
             {children}
-            {/*</div>*/}
-            {/*<Footer/>*/}
         </Providers>
         </body>
 

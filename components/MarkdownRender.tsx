@@ -16,8 +16,9 @@ export default function MarkdownRender(props: { blog: BlogDetail, content: strin
 
     const codeTheme = oneDark
     const date = new Date(props.blog.date).toLocaleDateString()
+    // @ts-ignore
     return (
-        <article className="mb-24 md:prose-lg prose md-post lg:prose-xl">
+        <article className="w-full mb-24 md:prose-lg prose md-post lg:prose-xl">
             <motion.div
                 className="progress-bar"
                 style={{scaleX: scrollYProgress}}

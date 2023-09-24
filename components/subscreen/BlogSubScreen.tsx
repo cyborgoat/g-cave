@@ -3,7 +3,7 @@ import {Chip, ScrollShadow} from "@nextui-org/react";
 
 export default function BlogSubScreen(props: { blogList: BlogInfo[], webPrefix: string }) {
     return (
-        <div className="grid grid-cols-3 w-screen justify-start items-center">
+        <div className="grid grid-cols-3 w-full justify-start items-center">
             <div className="col-span-1">
                 <h1 className="font-semibold text-5xl">
                     Developer

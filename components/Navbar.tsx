@@ -10,7 +10,7 @@ export default function App() {
     const rootPrefix = process.env.NEXT_PUBLIC_ROOT_PREFIX
     const webPrefix = rootPrefix ? "/g-cave/" : "/"
     return (
-        <Navbar shouldHideOnScroll className="h-[5vh] mt-4 bg-transparent w-full mx-auto">
+        <Navbar shouldHideOnScroll={false} className="h-[5vh] bg-transparent w-full mx-auto">
             <NavbarBrand>
                 <NavbarItem className="hidden lg:flex">
                     <a className="group/name font-normal text-xl" href={webPrefix}>

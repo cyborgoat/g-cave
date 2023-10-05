@@ -1,3 +1,5 @@
+import {MusicPlayer} from "@components/MusicPlayer";
+
 export default function MusicSubScreen() {
     return (
         <div className="grid grid-cols-3 w-full justify-start items-center">
@@ -9,7 +11,7 @@ export default function MusicSubScreen() {
                 </h1>
             </div>
             <div className="col-span-2">
-                Content coming soon...
+                <MusicPlayer/>
             </div>
         </div>
     )

@@ -1,7 +1,9 @@
+import UnderConstruction from "@components/UnderConstruction";
+
 export default function MusicPage() {
     return (
         <>
-            <div>Page under construction...</div>
+            <UnderConstruction/>
         </>
     )
 }

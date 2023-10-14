@@ -4,6 +4,7 @@ import {Navbar, NavbarBrand, NavbarContent, NavbarItem} from "@nextui-org/react"
 import {Dropdown, DropdownTrigger, DropdownMenu, DropdownItem, Button, RadioGroup, Radio} from "@nextui-org/react";
 import {AcmeLogo} from "./AcmeLogo";
 import process from "process";
+import {DarkModeToggle} from "@components/DarkModeToggle";
 
 
 export default function App() {
@@ -30,6 +31,7 @@ export default function App() {
                 </NavbarItem>
             </NavbarBrand>
             <NavbarContent justify="end">
+                <DarkModeToggle/>
                 <a className="transition duration-700 hover:text-amber-500 ease-in-out" href={webPrefix + 'blog'}>Blog</a>
                 <a className="transition duration-700 hover:text-amber-500 ease-in-out" href={webPrefix + 'music'}>Music</a>
                 <a className="transition duration-700 hover:text-amber-500 ease-in-out" href={webPrefix + 'cycling'}>Cycling</a>

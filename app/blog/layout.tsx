@@ -4,7 +4,7 @@ export default function BlogLayout({
     children: React.ReactNode
 }) {
     return (
-        <section className="flex my-8 lg:my-16 min-h-screen w-screen justify-center">
+        <section className="flex mt-8 lg:mt-16 min-h-screen w-screen justify-center">
             {/* Include shared UI here e.g. a header or sidebar */}
             {children}
         </section>

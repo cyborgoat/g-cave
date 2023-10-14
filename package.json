@@ -11,15 +11,15 @@
   "dependencies": {
     "@nextui-org/react": "^2.1.13",
     "@react-spring/web": "^9.7.3",
-    "@types/node": "20.8.0",
-    "@types/react-dom": "18.2.8",
-    "@types/react-syntax-highlighter": "^15.5.7",
+    "@types/node": "20.8.6",
+    "@types/react-dom": "18.2.13",
+    "@types/react-syntax-highlighter": "^15.5.8",
     "autoprefixer": "10.4.16",
-    "eslint": "8.50.0",
-    "eslint-config-next": "13.5.3",
+    "eslint": "8.51.0",
+    "eslint-config-next": "13.5.4",
     "framer-motion": "^10.16.4",
     "gray-matter": "^4.0.3",
-    "next": "13.5.3",
+    "next": "13.5.4",
     "postcss": "8.4.31",
     "react": "18.2.0",
     "react-cookie": "^6.1.1",
@@ -33,14 +33,14 @@
     "remark-gfm": "^4.0.0",
     "remark-math": "^6.0.0",
     "socket.io-client": "^4.7.2",
-    "styled-components": "^6.0.8",
+    "styled-components": "^6.1.0",
     "swr": "^2.2.4",
     "tailwindcss": "3.3.3",
     "typescript": "5.2.2"
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.10",
-    "@types/react": "^18.2.23",
-    "daisyui": "^3.8.2"
+    "@types/react": "^18.2.28",
+    "daisyui": "^3.9.2"
   }
 }

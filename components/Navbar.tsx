@@ -30,9 +30,9 @@ export default function App() {
                 </NavbarItem>
             </NavbarBrand>
             <NavbarContent justify="end">
-                <a href={webPrefix + 'blog'}>Blog</a>
-                <a href={webPrefix + 'music'}>Music</a>
-                <a href={webPrefix + 'cycling'}>Cycling</a>
+                <a className="transition duration-700 hover:text-amber-500 ease-in-out" href={webPrefix + 'blog'}>Blog</a>
+                <a className="transition duration-700 hover:text-amber-500 ease-in-out" href={webPrefix + 'music'}>Music</a>
+                <a className="transition duration-700 hover:text-amber-500 ease-in-out" href={webPrefix + 'cycling'}>Cycling</a>
             </NavbarContent>
         </Navbar>
     );

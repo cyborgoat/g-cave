@@ -20,7 +20,10 @@ export function DarkModeToggle() {
 
     return (
         <button onClick={toggleDarkMode} className="transparent" >
-            {darkMode ? <SunIcon/> : <MoonIcon/>}
+            {darkMode ?
+                <SunIcon className="h-6 w-6"/> :
+                <MoonIcon className="h-6 w-6"/>
+            }
         </button>
     );
 }

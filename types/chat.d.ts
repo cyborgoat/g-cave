@@ -1,7 +1,5 @@
-export interface Message {
-  username: string;
-  sid: string;
-  message: string;
-  users?: string[];
-  receiveTime?: string;
+export interface ChatMessage {
+    text: string,
+    id: string,
+    author: string,
 }

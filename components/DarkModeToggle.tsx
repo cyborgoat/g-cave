@@ -1,5 +1,6 @@
 import {useEffect, useState} from "react";
 import {MoonIcon, SunIcon} from "@nextui-org/shared-icons";
+import {Button} from "@nextui-org/react";
 
 export function DarkModeToggle() {
     const [darkMode, setDarkMode] = useState(false);
@@ -19,11 +20,14 @@ export function DarkModeToggle() {
     };
 
     return (
-        <button onClick={toggleDarkMode} className="transparent" >
+        <Button onClick={toggleDarkMode} isIconOnly
+                color={darkMode ? "warning" : "secondary"}
+                variant="faded"
+                aria-label="ColorMode">
             {darkMode ?
                 <SunIcon className="h-6 w-6"/> :
                 <MoonIcon className="h-6 w-6"/>
             }
-        </button>
+        </Button>
     );
 }

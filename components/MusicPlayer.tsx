@@ -18,8 +18,8 @@ export const MusicPlayer: FC<MusicPlayerProps> = ({className, ...otherProps}) =>
     const [liked, setLiked] = useState(false);
     let music: MusicInfo = {
         title: 'Night Owl',
-        musicUrl: `${PUBLIC_ASSETS_URL}/music/fools.mp3`,
-        albumUrl: `${PUBLIC_ASSETS_URL}/music/NightOwl.jpeg`,
+        musicUrl: `${PUBLIC_ASSETS_URL}/music/Night-Owl.mp3`,
+        albumUrl: `${PUBLIC_ASSETS_URL}/music/Night-Owl.jpeg`,
     }
 
     return (

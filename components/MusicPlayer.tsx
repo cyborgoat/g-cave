@@ -18,8 +18,7 @@ export const MusicPlayer: FC<MusicPlayerProps> = ({className, ...otherProps}) =>
     const [liked, setLiked] = useState(false);
     let music: MusicInfo = {
         title: 'Night Owl',
-        // musicUrl: `${PUBLIC_ASSETS_URL}/music/NightOwl.wav`,
-        musicUrl: `https://github.com/cyborgoat/g-cave/raw/main/public/assets/music/NightOwl.wav?raw=true`,
+        musicUrl: `${PUBLIC_ASSETS_URL}/music/fools.mp3`,
         albumUrl: `${PUBLIC_ASSETS_URL}/music/NightOwl.jpeg`,
     }
 
@@ -62,7 +61,8 @@ export const MusicPlayer: FC<MusicPlayerProps> = ({className, ...otherProps}) =>
                         </div>
                         <audio
                             controls
-                            src={music.musicUrl}>
+                        >
+                            <source src={music.musicUrl} type={"audio/mp3"}/>
                             Your browser does not support the
                             <code>audio</code> element.
                         </audio>

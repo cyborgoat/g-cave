@@ -8,16 +8,19 @@ import NextSongIcon from "@components/icon/NextSongIcon";
 import RepeatIcon from "@components/icon/RepeatIcon";
 import useSound from "use-sound";
 import {MusicInfo} from "../types/music";
+import process from "process";
 
 export interface MusicPlayerProps extends CardProps {
 }
 
 export const MusicPlayer: FC<MusicPlayerProps> = ({className, ...otherProps}) => {
+    const PUBLIC_ASSETS_URL = process.env.NEXT_PUBLIC_ASSETS_URL
     const [liked, setLiked] = useState(false);
     let music: MusicInfo = {
         title: 'Night Owl',
-        musicUrl: '/assets/music/NightOwl.wav',
-        albumUrl: '/assets/music/NightOwl.jpeg',
+        // musicUrl: `${PUBLIC_ASSETS_URL}/music/NightOwl.wav`,
+        musicUrl: `${PUBLIC_ASSETS_URL}/music/NightOwl.wav`,
+        albumUrl: `${PUBLIC_ASSETS_URL}/music/NightOwl.jpeg`,
     }
 
     return (

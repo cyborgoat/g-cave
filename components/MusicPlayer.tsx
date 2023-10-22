@@ -19,7 +19,7 @@ export const MusicPlayer: FC<MusicPlayerProps> = ({className, ...otherProps}) =>
     let music: MusicInfo = {
         title: 'Night Owl',
         // musicUrl: `${PUBLIC_ASSETS_URL}/music/NightOwl.wav`,
-        musicUrl: `${PUBLIC_ASSETS_URL}/music/NightOwl.wav`,
+        musicUrl: `https://github.com/cyborgoat/g-cave/raw/main/public/assets/music/NightOwl.wav?raw=true`,
         albumUrl: `${PUBLIC_ASSETS_URL}/music/NightOwl.jpeg`,
     }
 

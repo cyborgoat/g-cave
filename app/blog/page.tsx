@@ -1,43 +1,45 @@
-'use client';
+"use client";
 import useSWR from "swr";
 import React from "react";
 import LoadingCircles from "@components/LoadingCircles";
-import {BlogInfo} from "../../types/blog";
-import {ScrollShadow} from "@nextui-org/react";
+import { BlogInfo } from "../../types/blog";
+import { ScrollShadow } from "@nextui-org/react";
 
 const fetcher = (url: string) => fetch(url).then((res) => res.json());
-const BLOG_URL_PREFIX = 'https://raw.githubusercontent.com/cyborgoat/tech-reservoir/main'
+const BLOG_URL_PREFIX =
+  "https://raw.githubusercontent.com/cyborgoat/tech-reservoir/main";
 export default function BlogHome() {
-    const {data, error, isLoading} = useSWR(`${BLOG_URL_PREFIX}/assets/catalog.json`, fetcher);
+  const { data, error, isLoading } = useSWR(
+    `${BLOG_URL_PREFIX}/assets/catalog.json`,
+    fetcher
+  );
 
-    if (error) return "An error has occurred.";
+  if (error) return "An error has occurred.";
 
-    if (isLoading) return <LoadingCircles/>;
+  if (isLoading) return <LoadingCircles />;
 
-    let blogList = data as BlogInfo[];
-    return (
-        <div className="grid grid-cols-2">
-            <div className="col-span-1">
-                <ScrollShadow className="w-full h-[400px]">
-                    <ul className="list-disc list-inside">
-                        {blogList.map((blogInfo, ix) => {
-                            return (
-                                <li key={ix} className="mt-2">
-                                    <a href={`${location.pathname}/detail?category=${blogInfo.category}&title=${blogInfo.fname.replace('.json', '')}`}
-                                       className="hover:text-sky-400 duration-300"
-                                    >
-                                        {blogInfo.title}
-                                    </a>
-                                </li>
-                            )
-
-                        })}
-                    </ul>
-                </ScrollShadow>
+  let blogList = data as BlogInfo[];
+  return (
+    <div className="flex flex-col w-3/5 mx-auto gap-y-2 pb-36">
+      {blogList.map((blogInfo, ix) => {
+        return (
+          <a
+            key={ix}
+            href={`${location.pathname}/detail?category=${
+              blogInfo.category
+            }&title=${blogInfo.fname.replace(".json", "")}`}
+            className="w-full px-2 py-2 border-2 border-slate-400/30 rounded-md  mt-2 hover:bg-sky-300/50 duration-700"
+          >
+            <h1 className="text-xl font-semibold text-zinc-700 dark:text-zinc-100">
+              {blogInfo.title}
+            </h1>
+            <div className="text-regular font-normal text-zinc-500 dark:text-zinc-300">
+              {blogInfo.summary}
             </div>
-            <div className="col-span-1">
-                More contents coming soon...
-            </div>
-        </div>
-    )
+            <div className="pt-6 text-sm text-zinc-400/80">Posted on {blogInfo.date}</div>
+          </a>
+        );
+      })}
+    </div>
+  );
 }

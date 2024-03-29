@@ -1,7 +1,6 @@
 "use client";
 import useSWR from "swr";
 import React from "react";
-import LoadingCircles from "@components/LoadingCircles";
 import { BlogInfo } from "../../types/blog";
 import { Card, Skeleton } from "@nextui-org/react";
 

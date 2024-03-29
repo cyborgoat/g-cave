@@ -1,5 +1,5 @@
 'use client'
-import React from "react";
+import React, {Suspense} from "react";
 import useSWR from "swr";
 import {useSearchParams} from "next/navigation";
 import 'katex/dist/katex.min.css'
@@ -26,7 +26,9 @@ export default function Page() {
     const blogDetail = data as BlogDetail;
     const {content} = matter(blogDetail.content);
     return (
-        <MarkdownRender blog={blogDetail} content={content}></MarkdownRender>
+        <Suspense>
+            <MarkdownRender blog={blogDetail} content={content}></MarkdownRender>
+        </Suspense>
     );
 
 }
